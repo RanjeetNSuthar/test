@@ -33,8 +33,8 @@ def hashing_password(password):
     sha1password = hashlib.sha1(password.encode("utf-8")).hexdigest().upper()
     first_five = sha1password[:5]
     tail = sha1password[5:]
-    res= get_api_data(first_five)
-    count = get_pwned_count(res, tail)
+    result = get_api_data(first_five)
+    count = get_pwned_count(result, tail)
     return count
 
 main1()
